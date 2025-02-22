@@ -1,0 +1,313 @@
+  <!-- Ahmed Sn -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./image0-1.gif" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANS SHOP | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    background-image: url(grey-5xvepms9fbbi0bmh.jpg);
+    color: #ffcc00;
+    text-align: center;
+    overflow-x: hidden;
+
+
+
+    position: relative;
+}
+
+/* Floating Balls Background */
+.background-balls {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.ball {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 204, 0, 0.6);
+    border-radius: 50%;
+    animation: floatBall 5s infinite linear alternate;
+}
+
+@keyframes floatBall {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-50px) scale(1.2); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    animation: fadeIn 1.5s ease-in-out;
+    align-items: center;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 30px;
+    padding-left: 100px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+nav a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+    nav {
+        justify-content: center;
+        padding-left: 0;
+        gap: 20px;
+    }
+}
+
+.logo:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* Mobile Navigation */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 10px;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .show-menu {
+        display: flex;
+    }
+}
+
+/* Main Content */
+.container {
+    padding: 120px 20px;
+}
+
+h1 {
+    font-size: 28px;
+    animation: fadeText 3s infinite alternate ease-in-out;
+}
+
+@keyframes fadeText {
+    0% { opacity: 0; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.1); }
+}
+@keyframes fadeIn {
+0% { opacity: 0; transform: translateY(20px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+
+.description {
+    font-size: 20px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.animated-logo {
+    width: 50px;
+    height: 50px;
+    animation: floatLogo 3s infinite alternate ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes floatLogo {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+.join-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.join-btn:hover {
+    background: linear-gradient(135deg, #ff6600, #ffcc00);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.social-icons a {
+    color: #ffcc00;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6600;
+    transform: scale(1.2);
+}
+
+
+
+
+</style>
+<body>
+    <div class="background-balls"></div>
+    <img src="./image0-1.gif" alt="Logo">
+
+    <!-- Header -->
+    <header>
+        <img src="./image0-1.gif" alt="SANS SHOP Logo" class="logo">
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <nav>
+            <a href="#about">من نحن</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 id="animatedTitle">𝗦𝗔𝗡𝗦 𝗦𝗛𝗢𝗣 أهلا بك فى سيرفر</h1>
+        <p class="description">
+            <img src="./image0-1.gif" alt="Logo" class="animated-logo">
+            تعريف سيرفر (𝗦𝗔𝗡𝗦 𝗦𝗛𝗢𝗣)<br>
+            هوا سيرفر شوب يقدم جميع المنتجات ولعروضات بي دقة عالية<br>
+            أيضاً نقدم لكم خدمه وسيط مضمونة جداً ،<br>
+            يوجد طاقم دعم فني متكامل موجود 24 ساعة،
+        </p>
+        <button class="join-btn" onclick="window.location.href='YOUR_DISCORD_INVITE_LINK'">انضم الينا</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="YOUR_DISCORD_INVITE_LINK" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+    </footer>
+    <script>
+
+function toggleMenu() {
+    document.querySelector("nav").classList.toggle("show-menu");
+}
+
+function createFloatingBalls(num) {
+    const container = document.querySelector(".background-balls");
+    for (let i = 0; i < num; i++) {
+        let ball = document.createElement("div");
+        ball.classList.add("ball");
+        ball.style.left = Math.random() * 100 + "vw";
+        ball.style.top = Math.random() * 100 + "vh";
+        ball.style.animationDuration = (Math.random() * 5 + 3) + "s";
+        container.appendChild(ball);
+    }
+}
+createFloatingBalls(15);
+
+    </script>
+</body>
+</html>
